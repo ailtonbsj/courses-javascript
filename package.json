@@ -1,0 +1,29 @@
+{
+  "name": "es5-oo",
+  "version": "1.0.0",
+  "description": "Samples of use ecmascript 5 object oriented",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sample1": "cd sample1 && ../node_modules/.bin/browser-sync start --server --files '*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailtonbsj/es5-oo.git"
+  },
+  "keywords": [
+    "es5",
+    "javascript",
+    "prototype",
+    "oo"
+  ],
+  "author": "ailtonbsj <ailton.ifce@gmail.com> (https://ailtonbsj.wordpress.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ailtonbsj/es5-oo/issues"
+  },
+  "homepage": "https://github.com/ailtonbsj/es5-oo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4"
+  }
+}
