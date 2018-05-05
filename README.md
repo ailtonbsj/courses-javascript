@@ -12,11 +12,12 @@ Samples of use EcmaScript 5 Object Oriented
 
 ## Usage
 
-Run with npm `npm run sample1`:
+Run with npm `npm run sampleX`:
 
 ## Samples
 
 * Sample1: Constructor, properties, methods, heritage one level, super, new
+* Sample2: Heritage two levels
 
 ## Contributing
 

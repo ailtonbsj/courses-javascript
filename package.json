@@ -1,11 +1,12 @@
 {
   "name": "es5-oo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Samples of use ecmascript 5 object oriented",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sample1": "cd sample1 && ../node_modules/.bin/browser-sync start --server --files '*.js'"
+    "sample1": "cd sample1 && ../node_modules/.bin/browser-sync start --server --files '*.js'",
+    "sample2": "cd sample2 && ../node_modules/.bin/browser-sync start --server --files '*.js'"
   },
   "repository": {
     "type": "git",
