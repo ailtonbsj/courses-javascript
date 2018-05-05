@@ -18,6 +18,7 @@ Run with npm `npm run sampleX`:
 
 * Sample1: Constructor, properties, methods, heritage one level, super, new
 * Sample2: Heritage two levels
+* Sample3: CommonJS modules with Browserify, Gulpfile
 
 ## Contributing
 
