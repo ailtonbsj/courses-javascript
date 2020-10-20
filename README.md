@@ -20,6 +20,6 @@ Creator: Diego Fernandes
 
 > Folder: es5-oo
 
-Some examples made by myself or use paradigm Object Oriented simulation through prototypes.
+Some examples made by myself of use paradigm Object Oriented simulation through prototypes.
 
 Creator: José Ailton
