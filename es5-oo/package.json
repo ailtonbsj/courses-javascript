@@ -1,0 +1,36 @@
+{
+  "name": "es5-oo",
+  "version": "1.0.3",
+  "description": "Samples of use ecmascript 5 object oriented",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sample1": "cd sample1 && ../node_modules/.bin/browser-sync start --server --files '*.js'",
+    "sample2": "cd sample2 && ../node_modules/.bin/browser-sync start --server --files '*.js'",
+    "sample3": "cd sample3 && ../node_modules/.bin/gulp",
+    "sample4": "cd sample4 && ../node_modules/.bin/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailtonbsj/es5-oo.git"
+  },
+  "keywords": [
+    "es5",
+    "javascript",
+    "prototype",
+    "oo"
+  ],
+  "author": "ailtonbsj <ailton.ifce@gmail.com> (https://ailtonbsj.wordpress.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ailtonbsj/es5-oo/issues"
+  },
+  "homepage": "https://github.com/ailtonbsj/es5-oo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "browserify": "^16.2.0",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}
