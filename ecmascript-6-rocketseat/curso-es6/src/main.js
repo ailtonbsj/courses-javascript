@@ -110,7 +110,7 @@ mostraNomeEIdade(usuario);
     console.log(c)
 
     function soma(a, b, ...params) {
-        return params.reduce( (acc, val) => acc + val)
+        return params.reduce((acc, val) => acc + val)
     }
     console.log(soma(10, 20, 1, 2, 3))
 
@@ -120,7 +120,7 @@ mostraNomeEIdade(usuario);
     const arr3 = [...arr1, ...arr2]
     console.log(arr3)
 
-    const user = { name: 'Ailton', age: 27}
+    const user = { name: 'Ailton', age: 27 }
     const user2 = { ...user, name: 'Joao' }
     console.log(user2)
 })()
@@ -128,5 +128,15 @@ mostraNomeEIdade(usuario);
 // Aula Template Literals
 console.log(`Meu nome é ${nome} tenho ${idade} anos`);
 
+// Aula webpack
+import Soma, { Sub as subtracao } from './funcoes'
+import adderFunc from './adder'
+console.log(Soma(1, 2))
+console.log(subtracao(4, 2))
+console.log(adderFunc(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
+import * as operacoes from './multiDiv'
+console.log(operacoes.multi(1, 2, 3, 4))
+console.log(operacoes.div(100, 3, 2))
 
 
