@@ -18,4 +18,7 @@ yarn add @babel/preset-env
 
 # Executa script adicionado no package.json
 yarn dev
+
+# Adiciona suporte não oficial de rest/spread ao babel
+yarn add @babel/plugin-proposal-object-rest-spread
 ```
