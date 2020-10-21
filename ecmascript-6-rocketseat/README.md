@@ -1,4 +1,4 @@
-# History of commands
+# History of commands from folder `curso-es6`
 
 Requisitos: Node e Yarn
 
@@ -36,4 +36,27 @@ yarn add @babel/polyfill -D
 
 # Adiciona lib axios
 yarn add axios
+```
+# History of commands from folder `app-es6`
+
+```bash
+cd app-es6
+
+yarn init
+
+yarn add @babel/cli -D
+
+yarn add @babel/core @babel/preset-env -D
+
+yarn add babel-loader -D
+
+yarn add webpack-dev-server -D
+
+yarn add webpack webpack-cli -D
+
+yarn add axios
+
+yarn add @babel/plugin-transform-async-to-generator -D
+
+yarn add @babel/polyfill -D
 ```
