@@ -25,5 +25,8 @@ yarn add @babel/plugin-proposal-object-rest-spread -D
 yarn add webpack webpack-cli -D
 
 # Instala Babel loader
-yarn add babel-loader@8.0.0-beta.0 -D
+yarn add babel-loader -D
+
+# Instala Webpack dev server com Live reloading
+yarn add webpack-dev-server -D
 ```
