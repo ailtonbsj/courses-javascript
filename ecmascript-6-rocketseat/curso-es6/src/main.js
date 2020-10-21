@@ -140,3 +140,42 @@ console.log(operacoes.multi(1, 2, 3, 4))
 console.log(operacoes.div(100, 3, 2))
 
 
+// Aula Async/Await
+const minhaPromise = () => new Promise((resolve, reject) => {
+    setTimeout(() => resolve('OK'), 2000)
+})
+
+// minhaPromise()
+//     .then(response => console.log(response))
+//     .catch(err => console.log(err))
+
+async function runPromise() {
+    console.log(await minhaPromise())
+    console.log(await minhaPromise())
+}
+// runPromise()
+
+const arrowPromisse = async () => {
+    console.log(await minhaPromise())
+    console.log(await minhaPromise())
+}
+// arrowPromisse()
+
+// Aula Axios
+import axios from 'axios'
+
+class Api {
+    static async getUserInfo(username) {
+        try {
+            const response = await axios.get(`https://api.github.com/users/${username}`)
+            console.log(response)
+        } catch (error) {
+            console.warn('Error na API');
+        }
+
+    }
+}
+
+Api.getUserInfo('ailton.bsj')
+Api.getUserInfo('ailtonbsj')
+

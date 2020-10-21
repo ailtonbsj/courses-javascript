@@ -29,4 +29,11 @@ yarn add babel-loader -D
 
 # Instala Webpack dev server com Live reloading
 yarn add webpack-dev-server -D
+
+# Adiciona suporte a async-await no babel
+yarn add @babel/plugin-transform-async-to-generator -D
+yarn add @babel/polyfill -D
+
+# Adiciona lib axios
+yarn add axios
 ```
