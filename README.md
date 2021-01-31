@@ -6,6 +6,15 @@
 
 Source code repository of projects made in JavaScript ES5 and ES6+ courses through video classes or books.
 
+## JS com TDD na Prática
+![](https://img.shields.io/badge/status-in%20progress-blue)
+
+> Folder: tdd-na-pratica-justen
+
+An online course from [Udemy](https://app.rocketseat.com.br/starter).
+
+Creator: Willian Justen de Vasconcellos
+
 ## ES6 - RocketSeat Starter Cursos
 ![](https://img.shields.io/badge/status-completed-brightgreen)
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async await</title>
+</head>
+
+<body>
+    <script>
+        async function repos() {
+            let ailtonbsj = fetch('https://api.github.com/users/ailtonbsj/repos')
+                .then(res => res.json())
+            let winunix = fetch('https://api.github.com/orgs/winunix/repos')
+                .then(res => res.json())
+
+            let promises = await Promise.all([ailtonbsj, winunix])
+            let data = [].concat(...promises)
+            let filter = data.map(repo => repo.name)
+
+            console.log(filter)
+        }
+        repos()
+    </script>
+</body>
+
+</html>
