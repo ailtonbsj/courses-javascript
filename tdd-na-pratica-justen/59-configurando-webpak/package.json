@@ -5,7 +5,10 @@
   "main": "main.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --progress",
-    "watch": "npm run build -- --watch"
+    "watch": "npm run build -- --watch",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "nyan": "npm test -- --reporter=nyan",
+    "bail": "npm test -- --bail"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +19,8 @@
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "babel-loader": "^8.2.2",
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0",
     "terser-webpack-plugin": "^5.1.1",
     "webpack": "^5.21.1",
     "webpack-cli": "^4.5.0",
