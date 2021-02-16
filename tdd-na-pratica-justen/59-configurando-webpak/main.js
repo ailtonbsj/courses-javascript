@@ -1,8 +1,14 @@
-import * as R from 'ramda'
-
-const arr1 = [1, 1, 1, 2, 2, 3, 4, 5, 6, 6]
-const arr2 = [5, 6, 6, 6, 7, 7, 8, 9, 10, 1, 1]
-
-const arr3 = R.union(arr1, arr2)
-console.log(arr2)
-
+module.exports = {
+  sum (v1, v2) {
+    return v1 + v2
+  },
+  sub (v1, v2) {
+    return v1 - v2
+  },
+  mult (v1, v2) {
+    return v1 * v2
+  },
+  div (v1, v2) {
+    return v2 == 0 ? 'impossivel' : v1 / v2
+  }
+}
