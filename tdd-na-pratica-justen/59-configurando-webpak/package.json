@@ -6,10 +6,15 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack --progress",
     "watch": "npm run build -- --watch",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "test": "./node_modules/.bin/mocha --require esm tests/**/*.spec.js",
     "test:tdd": "npm test -- --watch",
     "nyan": "npm test -- --reporter=nyan",
-    "bail": "npm test -- --bail"
+    "bail": "npm test -- --bail",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "reporter": ["text", "html"],
+    "exclude": ["tests/**"]
   },
   "author": "",
   "license": "ISC",
@@ -21,7 +26,9 @@
     "@babel/preset-env": "^7.12.13",
     "babel-loader": "^8.2.2",
     "chai": "^4.3.0",
+    "esm": "^3.2.25",
     "mocha": "^8.3.0",
+    "nyc": "^15.1.0",
     "terser-webpack-plugin": "^5.1.1",
     "webpack": "^5.21.1",
     "webpack-cli": "^4.5.0",

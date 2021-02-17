@@ -1,5 +1,5 @@
-var expect = require('chai').expect
-var calc = require('../main.js')
+import { expect } from 'chai'
+import calc from '../main'
 
 describe('Calc', function () {
   describe('Smoke tests', function () {

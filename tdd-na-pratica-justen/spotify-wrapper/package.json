@@ -1,0 +1,17 @@
+{
+  "name": "spotify-wrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --require esm tests/**/*.spec.js",
+    "test:tdd" : "npm test -- --watch --bail"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "esm": "^3.2.25",
+    "mocha": "^8.3.0"
+  }
+}
