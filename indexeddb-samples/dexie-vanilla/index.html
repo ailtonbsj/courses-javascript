@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+</head>
+
+<body>
+
+</body>
+<script>
+    async function main() {
+
+        // Create database
+        const db = new Dexie("FriendDatabase");
+
+        // Create schema
+        db.version(1).stores({
+            friends: '++id, name, age'
+        });
+
+        // Insert items
+        db.friends.bulkPut([
+            { name: "Josephine", age: 21 },
+            { name: "Per", age: 75 },
+            { name: "Simon", age: 5 },
+            { name: "Sara", age: 50, notIndexedProperty: 'foo' }
+        ]);
+
+        // Select items with criteria query
+        console.log(
+            await db.friends.where("age").between(0, 25).toArray()
+        );
+        console.log(
+            await db.friends.orderBy("age").reverse().toArray()
+        );
+        console.log(
+            await db.friends.where('name').startsWith('S').keys()
+        );
+    }
+    main();
+</script>
+
+</html>
