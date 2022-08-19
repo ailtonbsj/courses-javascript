@@ -15,14 +15,14 @@ An online course from [Udemy](https://app.rocketseat.com.br/starter).
 
 Creator: Willian Justen de Vasconcellos
 
-## ES6 - RocketSeat Starter Cursos
-![](https://img.shields.io/badge/status-completed-brightgreen)
+## Samples with IndexedDB
+![](https://img.shields.io/badge/status-in%20progress-blue)
 
-> Folder: ecmascript-6-rocketseat
+> Folder: indexeddb-samples
 
-An online course from [RocketSeat](https://app.rocketseat.com.br/starter).
+Some examples using indexeddb using vanilla and dexie library.
 
-Creator: Diego Fernandes
+Creator: Ailton
 
 ## Samples of EcmaScript 5 Object Oriented
 ![](https://img.shields.io/badge/status-completed-brightgreen)
@@ -32,3 +32,12 @@ Creator: Diego Fernandes
 Some examples made by myself of use paradigm Object Oriented simulation through prototypes.
 
 Creator: José Ailton
+
+## ES6 - RocketSeat Starter Cursos
+![](https://img.shields.io/badge/status-completed-brightgreen)
+
+> Folder: ecmascript-6-rocketseat
+
+An online course from [RocketSeat](https://app.rocketseat.com.br/starter).
+
+Creator: Diego Fernandes

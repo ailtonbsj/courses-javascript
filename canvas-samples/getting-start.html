@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Getting Start</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        #myCanvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+</body>
+<script>
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+
+    // Line
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+
+    // Arc
+    ctx.beginPath();
+    ctx.arc(200, 100, 40, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    // Text
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World", 150, 50);
+    ctx.strokeText("Hello World", 270, 100);
+
+    // Gradient
+    let grd = ctx.createLinearGradient(0, 0, 200, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 200, 150, 80);
+
+    // Image
+    let img = new Image();
+    img.onload = () => ctx.drawImage(img, 300, 120);
+    img.src = 'home.png';
+    
+    // Paths
+    ctx.fillStyle = 'green';
+    ctx.beginPath();
+    ctx.moveTo(100, 140);
+    ctx.lineTo(100, 190);
+    ctx.lineTo(50, 190);
+    ctx.fill();
+
+</script>
+
+</html>
