@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bezier</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #myCanvas {
+            border: 1px solid black;
+            margin: calc((100vh - 506px) / 2) calc((100vw - 802px) / 2);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas"></canvas>
+</body>
+<script>
+    class Pointer {
+        constructor(x, y, r, label, ctx) {
+            this.x = x;
+            this.y = y;
+            this.r = r;
+            this.label = label;
+            this.ctx = ctx;
+        }
+
+        draw() {
+            this.ctx.beginPath();
+            this.ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+            this.ctx.fill();
+            this.ctx.fillText(this.label, this.x, this.y + 20);
+        }
+    }
+
+    function drawGuideLines(points, ctx) {
+        ctx.beginPath();
+        ctx.setLineDash([5, 5]);
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'blue';
+        ctx.moveTo(points[0].x, points[0].y);
+        ctx.lineTo(points[1].x, points[1].y);
+        ctx.moveTo(points[2].x, points[2].y);
+        ctx.lineTo(points[3].x, points[3].y);
+        ctx.stroke();
+        ctx.setLineDash([]);
+    }
+
+    function drawCurve(points, ctx) {
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.moveTo(points[0].x, points[0].y);
+        ctx.bezierCurveTo(
+            points[1].x, points[1].y, points[2].x, points[2].y, points[3].x, points[3].y);
+        ctx.stroke();
+        ctx.strokeStyle = 'black';
+    }
+
+    function drawCurveComponent(points, ctx) {
+        drawGuideLines(points, ctx);
+        drawCurve(points, ctx);
+        points.map(p => p.draw());
+    }
+
+    let hasFree = true;
+    let myCanvas = document.getElementById("myCanvas");
+    myCanvas.setAttribute('width', 800);
+    myCanvas.setAttribute('height', 500);
+    let ctx = myCanvas.getContext("2d");
+    ctx.font = "10px Arial";
+
+    let pressing = false;
+
+    const points = [
+        new Pointer(230, 350, 10, 'p1', ctx),
+        new Pointer(320, 100, 10, 'p2', ctx),
+        new Pointer(600, 100, 10, 'p3', ctx),
+        new Pointer(620, 350, 10, 'p4', ctx)
+    ];
+    let indexPoint = 0;
+
+    myCanvas.onmousedown = () => pressing = true;
+    myCanvas.onmouseup = () => pressing = false;
+    myCanvas.onmousemove = m => {
+        points.map((p, index) => {
+            if (Math.abs(p.x - m.offsetX) <= p.r &&
+                Math.abs(p.y - m.offsetY) <= p.r) indexPoint = index;
+        });
+        if (pressing) {
+            points[indexPoint].x = m.offsetX;
+            points[indexPoint].y = m.offsetY;
+        }
+        if (hasFree) {
+            hasFree = false;
+            ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+            drawCurveComponent(points, ctx);
+            setTimeout(() => hasFree = true, 10);
+        }
+    };
+
+    drawCurveComponent(points, ctx);
+</script>
+
+</html>
